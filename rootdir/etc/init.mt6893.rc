@@ -16,6 +16,9 @@ on post-fs-data
 on property:init.svc.face_hal=restarting
     stop face_hal
 
+on property:persist.vendor.radio.port_index=""
+    setprop sys.usb.config adb
+
 on boot
     # ZRAM
     swapon_all /vendor/fstab.enableswap

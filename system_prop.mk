@@ -36,11 +36,6 @@ PRODUCT_SYSTEM_PROPERTIES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.device_config.runtime_native_boot.iorap_readahead_enable=true
 
-# NFC
-PRODUCT_SYSTEM_PROPERTIES += \
-    persist.nfc.smartcard.recorder.enable=true \
-    persist.sys.nfc.disPowerSave=1
-
 # OMX
 PRODUCT_SYSTEM_PROPERTIES += \
     debug.stagefright.omx_default_rank.sw-audio=1 \

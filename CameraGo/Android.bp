@@ -5,6 +5,10 @@ android_app_import {
         dex_preopt: {
                 enabled: false,
         },
+    overrides: [
+        "Snap",
+        "Camera2",
+        ],
         privileged: true,
         product_specific: true,
 }

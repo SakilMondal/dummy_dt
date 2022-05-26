@@ -21,11 +21,8 @@ cc_binary {
     srcs: ["service.cpp", "Light.cpp"],
     shared_libs: [
         "libbase",
-        "libhardware",
         "libhidlbase",
-        "libhidltransport",
         "liblog",
-        "libhwbinder",
         "libutils",
         "android.hardware.light@2.0",
     ],

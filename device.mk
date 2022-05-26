@@ -51,7 +51,18 @@ AB_OTA_UPDATER := false
 
 # Audio
 PRODUCT_PACKAGES += \
-    audio.a2dp.default
+    android.hardware.audio.effect@6.0-impl \
+    android.hardware.bluetooth.audio@2.0-impl \
+    audio.a2dp.default \
+    audio.bluetooth.default \
+    audio_policy.stub \
+    audio.r_submix.default \
+    audio.usb.default \
+    libalsautils \
+    libaudiofoundation.vendor \
+    libbluetooth_audio_session \
+    libtinycompress \
+    libtinyxml
 
 PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/audio/audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_configuration.xml
@@ -68,6 +79,12 @@ PRODUCT_DEXPREOPT_SPEED_APPS += \
     Settings \
     SystemUI
 
+# DRM
+PRODUCT_PACKAGES += \
+    android.hardware.drm@1.3-service.clearkey \
+    libdrm.vendor \
+    libmockdrmcryptoplugin
+
 # fastbootd
 PRODUCT_PACKAGES += \
     fastbootd
@@ -83,6 +100,20 @@ PRODUCT_COPY_FILES += \
 # Freeform Multiwindow
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.freeform_window_management.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.freeform_window_management.xml
+
+# Gatekeeper
+PRODUCT_PACKAGES += \
+    android.hardware.gatekeeper@1.0-impl \
+    android.hardware.gatekeeper@1.0-service
+
+# Graphics
+PRODUCT_PACKAGES += \
+    android.hardware.graphics.composer@2.1-service
+
+# Health
+PRODUCT_PACKAGES += \
+    android.hardware.health@2.1-impl \
+    android.hardware.health@2.1-service
 
 # HIDL
 PRODUCT_PACKAGES += \
@@ -104,6 +135,25 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/keylayout/touchpanel.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/touchpanel.kl
 
+# Keymaster
+PRODUCT_PACKAGES += \
+    libkeymaster4.vendor:64 \
+    libkeymaster4support.vendor:64 \
+    libkeymaster_portable.vendor:64 \
+    libkeymaster_messages.vendor:64 \
+    libsoft_attestation_cert.vendor:64 \
+    libpuresoftkeymasterdevice.vendor:64
+
+# KPOC
+PRODUCT_PACKAGES += \
+    android.hardware.health@2.0 \
+    libsuspend
+
+# Memtrack
+PRODUCT_PACKAGES += \
+    android.hardware.memtrack@1.0-impl \
+    android.hardware.memtrack@1.0-service
+
 # NFC
 PRODUCT_PACKAGES += \
     com.android.nfc_extras \
@@ -114,6 +164,10 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/nfc/libnfc-nxp.conf:$(TARGET_COPY_OUT_SYSTEM)/etc/libnfc-nxp.conf
+
+# Renderscript
+PRODUCT_PACKAGES += \
+    android.hardware.renderscript@1.0-impl
 
 # Screen density
 PRODUCT_AAPT_CONFIG := xxxhdpi
@@ -145,7 +199,12 @@ PRODUCT_PACKAGES += \
 
 # Sensors
 PRODUCT_PACKAGES += \
-    android.hardware.sensors@2.0-service.oneplus_denniz
+    android.hardware.sensors@2.0-service.oneplus_denniz \
+    libsensorndkbridge
+
+# Soundtrigger
+PRODUCT_PACKAGES += \
+    android.hardware.soundtrigger@2.3-impl
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
@@ -162,6 +221,14 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     ImsServiceBase
 
+# Textclassifier
+PRODUCT_PACKAGES += \
+    libtextclassifier_hash.vendor
+
+# Thermal
+PRODUCT_PACKAGES += \
+    android.hardware.thermal@1.0-impl
+
 # Udfps
 PRODUCT_PACKAGES += \
     UdfpsResources
@@ -169,4 +236,7 @@ PRODUCT_PACKAGES += \
 # Wi-Fi
 PRODUCT_PACKAGES += \
     TetheringConfigOverlay \
-    WifiOverlay
+    WifiOverlay \
+    android.hardware.wifi@1.0-service \
+    libkeystore-engine-wifi-hidl:64 \
+    libkeystore-wifi-hidl

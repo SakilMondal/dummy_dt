@@ -135,6 +135,7 @@ TARGET_USES_MKE2FS := true
 
 # Properties
 TARGET_VENDOR_PROP += $(DEVICE_PATH)/vendor.prop
+TARGET_ODM_PROP += $(DEVICE_PATH)/odm.prop
 
 # Releasetools
 TARGET_RELEASETOOLS_EXTENSIONS := $(DEVICE_PATH)/releasetools

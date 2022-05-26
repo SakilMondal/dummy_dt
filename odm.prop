@@ -1,0 +1,16 @@
+persist.vendor.engineer.hide.log=6996
+persist.vendor.engineer.hide.warn=6776
+ro.product.bootreg.disable.command=true
+ro.oplus.system.camera.name=com.oplus.camera
+ro.camera.hfr.enable=1
+ro.camera.videoeis.enable=1
+ro.camera.temperature.limit=440
+ro.camera.portrait.blur.level.enable=1
+ro.oplus.screenhole.border=14
+ro.separate.soft=20827
+ro.vendor.oplus.market.name=OnePlus Nord2 5G
+ro.sys.reserve.integrate=true
+ro.csc.spotify.music.referrerid=oneplus-mobile-global
+ro.csc.spotify.music.partnerid=oneplus-mobile-global
+odm.dirac.path=/odm/etc/dirac
+ro.oplus.image.odm.version=version_stub

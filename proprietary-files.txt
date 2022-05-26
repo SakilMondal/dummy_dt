@@ -555,7 +555,6 @@ odm/lib/libhyperlapse.so
 odm/lib/libimgClarityEvaluate.so
 odm/lib/liblvimfs.so
 odm/lib/liblvimfs_wrapper.so
-odm/lib/libmegface_rt_bokeh.so
 odm/lib/libmpbase.so
 odm/lib/libnp-loader.so
 odm/lib/libocam_common.so
@@ -825,7 +824,6 @@ odm/lib64/libhyperlapse.so
 odm/lib64/libimgClarityEvaluate.so
 odm/lib64/liblvimfs.so
 odm/lib64/liblvimfs_wrapper.so
-odm/lib64/libmegface_rt_bokeh.so
 odm/lib64/libml_util.so
 odm/lib64/libmpbase.so
 odm/lib64/libnp-loader.so
@@ -1302,7 +1300,6 @@ odm/etc/camera/megvii/videolut_portrait_front.png
 odm/etc/camera/megvii/video_retention_model
 odm/etc/camera/megvii/video_retention_model_post
 odm/etc/camera/model/DocDetectV15.xbin
-odm/etc/camera/model/license.lic
 odm/etc/camera/model_fdc.data
 odm/etc/camera/neon_yuv_LUT_64.bin
 odm/etc/camera/nord2_base16_inner_relu_vggloss_8bit_2400x1360.dla
@@ -3941,7 +3938,6 @@ vendor/bin/rttv
 vendor/bin/vpud
 vendor/bin/wifi_dump
 vendor/bin/wlan_assistant
-vendor/data/misc/ProjectConfig.mk
 vendor/data/model/scene_detection.dla
 vendor/etc/.tp/.ht120.mtc
 vendor/etc/a2dp_in_audio_policy_configuration.xml
@@ -3969,7 +3965,6 @@ vendor/etc/factory.ini
 vendor/etc/file112.wav
 vendor/etc/fstab.emmc
 vendor/etc/fstab.enableswap
-vendor/etc/fstab.mt6893
 vendor/etc/fstb.cfg
 vendor/etc/FV-SAM-MTK2.dat
 vendor/etc/gbe.cfg
@@ -4399,7 +4394,6 @@ vendor/etc/virtual-spn-conf-by-efpnn.xml
 vendor/etc/virtual-spn-conf-by-efspn.xml
 vendor/etc/virtual-spn-conf-by-imsi.xml
 vendor/etc/xgf.cfg
-vendor/euclid_build.prop
 vendor/lib/arm.graphics-V1-ndk_platform.so
 vendor/lib/AV1SecureVdecCA.so
 vendor/lib/AVCSecureVdecCA.so
@@ -4794,9 +4788,4 @@ vendor/lib64/vendor.trustonic.tee.tui@1.0.so
 vendor/lib64/vendor.trustonic.tee@1.0.so
 vendor/lib64/vendor.trustonic.tee@1.1.so
 vendor/lib64/VP9SecureVdecCA.so
-vendor/recovery-from-boot.p
-vendor/res/images/lcd_test_00.png
-vendor/res/images/lcd_test_01.png
-vendor/res/images/lcd_test_02.png
-vendor/ro.prop
-vendor/rw.prop
+vendor/ueventd.rc

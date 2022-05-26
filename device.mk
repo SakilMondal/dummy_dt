@@ -52,7 +52,10 @@ AB_OTA_UPDATER := false
 # Audio
 PRODUCT_PACKAGES += \
     audio.a2dp.default
-	
+
+PRODUCT_COPY_FILES += \
+    $(DEVICE_PATH)/audio/audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_configuration.xml
+
 # CameraGo	
 PRODUCT_PACKAGES += \
     CameraGo
@@ -69,16 +72,13 @@ PRODUCT_DEXPREOPT_SPEED_APPS += \
 PRODUCT_PACKAGES += \
     fastbootd
 
-PRODUCT_COPY_FILES += \
-    $(DEVICE_PATH)/vendor_overlay/etc/fstab.mt6893:$(TARGET_COPY_OUT_RAMDISK)/fstab.mt6893
-
 # Fingerprint
 PRODUCT_PACKAGES += \
     android.hardware.biometrics.fingerprint@2.3-service.denniz \
 	vendor.oplus.hardware.biometrics.fingerprint@2.1
 
 PRODUCT_COPY_FILES += \
-    frameworks/native/data/etc/android.hardware.fingerprint.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/android.hardware.fingerprint.xml
+    frameworks/native/data/etc/android.hardware.fingerprint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.fingerprint.xml
 
 # Freeform Multiwindow
 PRODUCT_COPY_FILES += \
@@ -102,7 +102,7 @@ PRODUCT_PACKAGES += \
 
 # Keylayout
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/keylayout/touchpanel.kl:$(TARGET_COPY_OUT_SYSTEM)/usr/keylayout/touchpanel.kl
+    $(LOCAL_PATH)/configs/keylayout/touchpanel.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/touchpanel.kl
 
 # NFC
 PRODUCT_PACKAGES += \
@@ -155,10 +155,6 @@ PRODUCT_SOONG_NAMESPACES += \
 -include $(DEVICE_PATH)/system_prop.mk
 PRODUCT_COMPATIBLE_PROPERTY_OVERRIDE := true
 
-# Vendor overlay
-PRODUCT_COPY_FILES += \
-    $(call find-copy-subdir-files,*,$(LOCAL_PATH)/vendor_overlay/,$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/30/)
-    
 # Symbols
 PRODUCT_PACKAGES += \
     libshim_vtservice
